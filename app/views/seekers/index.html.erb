@@ -1,0 +1,9 @@
+<h1>Seekers#index</h1>
+
+<div>
+    <% @seekers.each do |seeker| %>
+        <h3><%= link_to seeker.to_s, seeker_path(seeker) %></h3><br>
+        <h4>    Age: <%= seeker.age %></h4><br>
+        <h4> Gender: <%= seeker.sex %></h4><br>
+    <% end %> 
+</div>

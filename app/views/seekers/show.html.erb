@@ -1,0 +1,13 @@
+<h1><%= @seeker.to_s %></h1>
+
+<ul>
+    <li>Age: <%= @seeker.age %></li>
+    <li>Sex: <%= @seeker.sex %></li>
+</ul>
+
+<h3>Skills</h3>
+<ul>
+    <%= @seeker.skills.each do |skill| %>
+        <li><%= skill.name %> - <%= skill.description %></li>
+    <% end %>
+</ul>

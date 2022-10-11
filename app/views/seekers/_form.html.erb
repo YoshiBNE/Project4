@@ -1,0 +1,24 @@
+<%= form_for @seeker do |f| %>
+    <%= f.label 'First Name' %>
+    <%= f.text_field :first_name %><br>
+
+    <%= f.label 'Last Name' %>
+    <%= f.text_field :last_name %><br>
+
+    <%= f.label 'Age' %>
+    <%= f.number_field :age %><br>
+
+    <%= f.label 'Gender' %>
+    <%= f.text_field :sex %><br>
+
+    <%= f.fields_for :skills do |inner_form| %>
+        <%= inner_form.label :name %>
+        <%= inner_form.text_field :name %><br>
+
+
+        <%= inner_form.label :description %>
+        <%= inner_form.text_field :description %><br>
+    <% end %>
+
+    <%= f.submit 'Submit Details' %>
+<% end %>
